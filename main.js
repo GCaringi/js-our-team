@@ -52,7 +52,7 @@ for (let i = 0; i < teams.length; i++){
                         <p>${teams[i].role}</p>
                     </div>
                 </div>
-                    `
+                    `;
     teamMembers.innerHTML += (member);
 }
 
@@ -81,5 +81,6 @@ btn.addEventListener("click",
                         </div>
                             `
         teamMembers.innerHTML += member;
+        alert("Nuovo membro del team stato aggiunto")
     }
 )
