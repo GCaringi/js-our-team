@@ -55,3 +55,31 @@ for (let i = 0; i < teams.length; i++){
                     `
     teamMembers.innerHTML += (member);
 }
+
+
+const btn = document.getElementById("addMemberButton");
+
+btn.addEventListener("click", 
+    function(){
+        const fullName = document.getElementById("name").value;
+        const role = document.getElementById("role").value;
+        const img = document.getElementById("image").value;
+
+        const member = 
+                        `
+                        <div class = "team-card">
+                            <div class="card-image">
+                                <img
+                                src="${img}"
+                                alt="${fullName}"
+                                />
+                            </div>
+                            <div class="card-text">
+                                <h3>${fullName}</h3>
+                                <p>${role}</p>
+                            </div>
+                        </div>
+                            `
+        teamMembers.innerHTML += member;
+    }
+)
