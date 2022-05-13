@@ -34,5 +34,24 @@ const teams = [
         role: "Graphic Designer",
         image: "./img/barbara-ramos-graphic-designer.jpg"
     }
-
 ]
+
+const teamMembers = document.querySelector(".team-container");
+for (let i = 0; i < teams.length; i++){
+    const member = 
+                    `
+                <div class = "team-card">
+                    <div class="card-image">
+                        <img
+                        src="${teams[i].image}"
+                        alt="${teams[i].name}"
+                        />
+                    </div>
+                    <div class="card-text">
+                        <h3>${teams[i].name}</h3>
+                        <p>${teams[i].role}</p>
+                    </div>
+                </div>
+                    `
+    teamMembers.innerHTML += (member);
+}
