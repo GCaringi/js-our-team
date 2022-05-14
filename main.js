@@ -61,26 +61,34 @@ const btn = document.getElementById("addMemberButton");
 
 btn.addEventListener("click", 
     function(){
-        const fullName = document.getElementById("name").value;
-        const role = document.getElementById("role").value;
-        const img = document.getElementById("image").value;
+        // const fullName = document.getElementById("name").value;
+        // const role = document.getElementById("role").value;
+        // const img = document.getElementById("image").value;
+        const newMemb = {
+            name: document.getElementById("name").value,
+            role: document.getElementById("role").value,
+            image: document.getElementById("image").value,
+        }
 
         const member = 
                         `
                         <div class = "team-card">
                             <div class="card-image">
                                 <img
-                                src="${img}"
-                                alt="${fullName}"
+                                src="${newMemb.image}"
+                                alt="${newMemb.name}"
                                 />
                             </div>
                             <div class="card-text">
-                                <h3>${fullName}</h3>
-                                <p>${role}</p>
+                                <h3>${newMemb.name}</h3>
+                                <p>${newMemb.role}</p>
                             </div>
                         </div>
                             `
         teamMembers.innerHTML += member;
+        teams.push(newMemb);
         alert("Nuovo membro del team stato aggiunto")
     }
 )
+
+console.log(teams);
